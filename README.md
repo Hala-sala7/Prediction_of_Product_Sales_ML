@@ -23,13 +23,11 @@ The target variable (Item Outlet Sales) is right-skewed, with most sales occurri
 
 ### 3. Sales Outliers by Outlet Type
 Supermarket Type 3 stands out with significantly higher median sales and a larger range compared to Grocery Stores, which have the lowest performance.
-<img width="1014" height="649" alt="download" src="https://github.com/user-attachments/assets/2a935e77-f9b9-4c30-9f4a-43957cf144bc" />
 <img width="868" height="639" alt="download" src="https://github.com/user-attachments/assets/d685da59-6c0d-42da-81f4-5751da70f531" />
 
 ### 4. Average Sales by Item Type (Type 3 Supermarkets)
 In the most successful outlet type (Supermarket Type 3), "Breakfast" and "Fruits and Vegetables" are the top-performing categories.
-![Uploading download.png…]()
-
+<img width="1014" height="649" alt="download" src="https://github.com/user-attachments/assets/2a935e77-f9b9-4c30-9f4a-43957cf144bc" />
 
 ## Methods
 - **Data Cleaning**: Handled missing values (imputation), corrected inconsistent categories (e.g., 'LF', 'low fat', 'Low Fat'), and checked for duplicates.
@@ -45,8 +43,8 @@ The analysis showed that the **Item_MRP** (Maximum Retail Price) has the stronge
 
 #### Model Performance
 The **Random Forest Model** performed significantly better than the Linear Regression model:
-- **Test R²**: [Insert your R2 score here]
-- **Test RMSE**: [Insert your RMSE here]
+- **Test R²**: [0.604]
+- **Test RMSE**: [1,044.663]
 
 ## Recommendations:
 1. **Optimize Inventory for Type 3 Supermarkets**: Focus on high-performing categories like Breakfast and Produce.
