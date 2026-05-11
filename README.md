@@ -1,32 +1,57 @@
-# Retail Sales Forecasting: Predictive Analytics for Outlet Performance
+# Prediction of Product Sales
 
-## 📌 Project Overview
-This project focuses on building a robust predictive model to forecast sales for a major retail chain (BigMart). By analyzing product attributes (weight, visibility, type) and outlet characteristics (size, location, establishment year), the goal is to identify the key drivers of sales and provide actionable insights for inventory management and revenue optimization.
+## Analyzing Product and Store Attributes to Predict Sales
 
-## 📊 Business Insights
-Through a thorough Exploratory Data Analysis (EDA), two primary insights were identified to drive operational efficiency:
+**Author**: Hala Salah
 
-### 1. The Impact of Outlet Type on Sales Consistency
-* **Insight:** Supermarket Type 3 consistently outperforms other outlet types (Grocery Stores and Type 1/2) in terms of average sales volume. This suggests that the larger scale and operational model of Type 3 locations drive higher customer engagement.
-* **Strategic Recommendation:** Scaling the inventory management strategies of Type 3 to other outlets could significantly boost overall revenue.
+### Business Problem:
+The goal of this project is to help retailers understand the properties of products and outlets that play crucial roles in increasing sales. By building a predictive model, we aim to forecast the sales of each product at a particular outlet.
 
-### 2. Item Visibility Paradox
-* **Insight:** The analysis revealed that many products with recorded visibility of "0.0" were still generating sales, which indicated a data inconsistency. After correcting this and applying a "Minimum Presence" imputation, we found that visibility significantly impacts sales for daily essentials like "Dairy" and "Bread."
-* **Strategic Recommendation:** Optimizing shelf placement for high-turnover daily products can drive impulse purchases and increase average basket size.
+## Exploratory Data Analysis (EDA)
 
-## 🤖 Model Summary & Evaluation
-The project involved a complete machine learning pipeline, including data cleaning, feature engineering, and advanced regression modeling.
+During the EDA phase, several visualizations were created to understand the distribution of data and identify trends:
 
-* **The Pipeline:**
-    * **Preprocessing:** Missing values were handled using specialized imputation (Mean for weight, Mode for outlet size).
-    * **Encoding:** Used **Ordinal Encoding** for tiered locations and **One-Hot Encoding** for categorical features.
-    * **Scaling:** Numerical features were standardized for model stability.
+### 1. Item Visibility Distribution
+Most products have low visibility (concentrated between 0.00 and 0.10), indicating that only a few items get premium shelf space.
+<img width="571" height="433" alt="download" src="https://github.com/user-attachments/assets/d7c2a969-7bf0-4956-8a12-87f5acc0fe56" />
+)
 
-* **Final Model Performance:**
-    * **Primary Model:** Tuned Random Forest Regressor (via GridSearchCV).
-    * **Key Metrics:**
-        * **Test R² Score:** **0.604** (A balanced and reliable score for retail forecasting).
-        * **Mean Absolute Error (MAE):** ~727 (Average deviation in sales prediction).
+### 2. Distribution of Sales
+The target variable (Item Outlet Sales) is right-skewed, with most sales occurring at lower values and a few high-value outliers reaching up to 13,000.
+<img width="1189" height="490" alt="download" src="https://github.com/user-attachments/assets/5c5aaa92-5304-4afd-a12f-8a6d7a018838" />
 
----
-*This project was developed to showcase data science skills in predictive modeling, data cleaning, and business analytics.*
+
+### 3. Sales Outliers by Outlet Type
+Supermarket Type 3 stands out with significantly higher median sales and a larger range compared to Grocery Stores, which have the lowest performance.
+<img width="1014" height="649" alt="download" src="https://github.com/user-attachments/assets/2a935e77-f9b9-4c30-9f4a-43957cf144bc" />
+<img width="868" height="639" alt="download" src="https://github.com/user-attachments/assets/d685da59-6c0d-42da-81f4-5751da70f531" />
+
+### 4. Average Sales by Item Type (Type 3 Supermarkets)
+In the most successful outlet type (Supermarket Type 3), "Breakfast" and "Fruits and Vegetables" are the top-performing categories.
+![Uploading download.png…]()
+
+
+## Methods
+- **Data Cleaning**: Handled missing values (imputation), corrected inconsistent categories (e.g., 'LF', 'low fat', 'Low Fat'), and checked for duplicates.
+- **Feature Engineering**: Preprocessed the data using One-Hot Encoding for categorical variables and Scaling for numerical features through a Scikit-Learn Pipeline.
+- **Machine Learning Modeling**: 
+    - Linear Regression
+    - Random Forest Regressor
+
+## Results
+
+#### Top Factors Influencing Sales
+The analysis showed that the **Item_MRP** (Maximum Retail Price) has the strongest positive correlation with sales. 
+
+#### Model Performance
+The **Random Forest Model** performed significantly better than the Linear Regression model:
+- **Test R²**: [Insert your R2 score here]
+- **Test RMSE**: [Insert your RMSE here]
+
+## Recommendations:
+1. **Optimize Inventory for Type 3 Supermarkets**: Focus on high-performing categories like Breakfast and Produce.
+2. **Pricing Strategy**: Leverage the strong correlation between MRP and Sales for revenue optimization.
+3. **Outlet Expansion**: The Supermarket Type 3 model is the most profitable; consider mirroring its layout in other locations.
+
+## For further information
+For any additional questions, please contact **Hala Salah**.
