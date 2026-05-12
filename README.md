@@ -46,10 +46,68 @@ The **Random Forest Model** performed significantly better than the Linear Regre
 - **Test R²**: [0.604]
 - **Test RMSE**: [1,044.663]
 
-## Recommendations:
+## First Recommendations:
 1. **Optimize Inventory for Type 3 Supermarkets**: Focus on high-performing categories like Breakfast and Produce.
 2. **Pricing Strategy**: Leverage the strong correlation between MRP and Sales for revenue optimization.
 3. **Outlet Expansion**: The Supermarket Type 3 model is the most profitable; consider mirroring its layout in other locations.
 
+# Model Explainability
+
+## Linear Regression Coefficients
+
+The coefficients from the Linear Regression model were extracted to understand how different features influence product sales predictions.
+
+### Top 3 Most Impactful Features
+
+1. **Outlet_Type_Supermarket Type3**
+   - This feature had the strongest positive impact on predicted sales.
+   - Products sold in Supermarket Type3 outlets tend to achieve significantly higher sales.
+
+2. **Item_MRP**
+   - Higher product prices were associated with higher sales predictions.
+   - This suggests that premium-priced products often generate greater revenue.
+
+3. **Outlet_Size_High**
+   - Larger outlet sizes positively influenced product sales.
+   - Bigger stores may attract more customers and offer greater product availability.
+
+### Coefficient Visualization
+
+<img width="989" height="590" alt="download" src="https://github.com/user-attachments/assets/b25c83c9-ca83-4d67-b482-43f7df6f98aa" />
+
+---
+
+# Tree-Based Model Feature Importances
+
+The feature importances extracted from the tuned Random Forest model show which variables contributed the most to prediction accuracy.
+
+### Top 5 Most Important Features
+
+1. **Item_MRP**
+2. **Outlet_Type_Grocery Store**
+3. **Outlet_Type_Supermarket Type3**
+4. **Outlet_Establishment_Year**
+5. **Item_Visibility**
+
+### Interpretation
+
+- `Item_MRP` was the most influential feature overall.
+- Outlet type significantly affected sales performance.
+- Older or more established outlets showed measurable influence on sales.
+- Product visibility also contributed to prediction outcomes.
+
+### Feature Importance Visualization
+<img width="1051" height="547" alt="download" src="https://github.com/user-attachments/assets/31a8c3ab-c0cb-4d68-a62f-e46c1e223834" />
+
+---
+
+# Final Recommendations
+
+Based on the analysis:
+
+- Focus on optimizing pricing strategies since Item_MRP strongly affects sales.
+- Expand successful outlet types such as Supermarket Type3 locations.
+- Improve product visibility and placement inside stores.
+- Invest in larger outlet formats that tend to generate higher sales.
 ## For further information
 For any additional questions, please contact **Hala Salah**.
