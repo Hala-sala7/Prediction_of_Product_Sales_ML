@@ -42,9 +42,15 @@ In the most successful outlet type (Supermarket Type 3), "Breakfast" and "Fruits
 The analysis showed that the **Item_MRP** (Maximum Retail Price) has the strongest positive correlation with sales. 
 
 #### Model Performance
-The **Random Forest Model** performed significantly better than the Linear Regression model:
-- **Test R²**: [0.604]
-- **Test RMSE**: [1,044.663]
+The **tuned Random Forest model** performed best, with a modest improvement over Linear Regression:
+
+| Model | Test R² | Test RMSE |
+|---|---|---|
+| Linear Regression | 0.567 | 1,093.6 |
+| Random Forest (default) | 0.544 | 1,121.1 |
+| Random Forest (tuned) | **0.603** | **1,046.7** |
+
+Hyperparameter tuning with GridSearchCV eliminated the overfitting of the default Random Forest (train R² 0.938 vs test 0.544), producing a well-balanced model (train 0.610 vs test 0.603).
 
 ## First Recommendations:
 1. **Optimize Inventory for Type 3 Supermarkets**: Focus on high-performing categories like Breakfast and Produce.
